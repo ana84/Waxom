@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    @include font-parametars (14px, 16px, 400);
+    font-family: $raleway;
+    color: $base-color;
+}
+
+.wrapper {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 30px;
+    position: relative;
+    width: 100%;
+}

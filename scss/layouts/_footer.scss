@@ -1,0 +1,221 @@
+.footer-top {
+    background-color: $nero;
+    width: 100%;
+    position: relative;
+
+    .wrapper {
+        padding: 80px 15px;
+        display: flex;
+    }
+
+    @include bp(mobile) {
+        .wrapper {
+            flex-direction: column;
+        }
+    }
+}
+
+.first-col,
+.second-col,
+.third-col,
+.fourth-col {
+    flex: 1;
+    padding: 0 15px;
+}
+
+/*First col*/
+.first-col {
+    .logo-foot {
+        padding-top: 0;
+        height: 54px;
+
+        a span {
+            bottom: 50px;
+            left: 67px;
+            display: inline-block;
+            position: relative;
+            font-family: $raleway;
+            @include font-parametars(34px, 36px, 400);
+            transition: .3s ease-in-out;
+
+            &:hover {
+                color: $rodeo;
+            }
+        }
+    }
+
+    p {
+        margin-top: 22px;
+        margin-bottom: 24px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $light-grey;
+        transition: .3s ease-in-out;
+
+        &:hover {
+            color: $rodeo;
+        }
+    }
+
+    triangle {
+        color: $light-grey;
+        transition: .3s ease-in-out;
+
+        &:hover {
+            color: $rodeo;
+        }
+    }
+}
+
+.footer-top {
+    p {
+        font-family: $montserrat;
+        @include font-parametars (14px, 24px, 300);
+        color: $dark-gray;
+        margin-bottom: 33px;
+    }
+
+    h2 {
+        font-family: $raleway;
+        @include font-parametars (24px, 26px, 600);
+        color: $base-color;
+        margin-bottom: 23px;
+        padding-top: 25px;
+    }
+}
+
+/*Second col*/
+.second-col {
+    span {
+        display: block;
+        font-family: $montserrat;
+        @include font-parametars (14px, 20px, 300);
+        color: $gondola;
+        transition: .3s ease-in-out;
+
+        &:hover {
+            color: $base-color;
+        }
+    }
+
+    a {
+        font-family: $montserrat;
+        @include font-parametars (14px, 20px, 300);
+        color: $dark-gray;
+        text-decoration: none;
+        transition: .3s ease-in-out;
+
+        &:hover {
+            color: $beige-col;
+        }
+
+        &:not(:last-of-type):after {
+            content: ' ';
+            display: block;
+            height: 1px;
+            max-width: 270px;
+            background-color: $negro;
+            margin: 20px 0 16px;
+        }
+    }
+}
+
+/*Third col*/
+.third-col {
+    p {
+        margin-bottom: 0;
+        line-height: 20px;
+
+        a {
+            color: $cerulean;
+            transition: .3s ease-in-out;
+            text-decoration: none;
+
+            &:hover {
+                color: $base-color;
+            }
+        }
+    }
+
+    span {
+        font-family: $montserrat;
+        @include font-parametars (14px, 20px, 300);
+        color: $gondola;
+
+        &:not(:last-of-type):after {
+            content: ' ';
+            display: block;
+            height: 1px;
+            max-width: 270px;
+            background-color: $negro;
+            margin: 21px 0 13px;
+        }
+    }
+}
+
+/*Forth col*/
+
+.widget {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        padding: 2.5px 2.5px;
+    }
+
+    @include bp(mobile) {
+        li {
+            flex: 1 1 50%;
+            padding: 2.5px 0 10px;
+        }
+    }
+}
+
+/* FOOTER-BOTTOM */
+.footer-bottom {
+    background-color: $black;
+    min-height: 111px;
+    width: 100%;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        padding-top: 46px;
+    }
+
+    ul li {
+        position: relative;
+        display: inline;
+        padding: 0 13px;
+
+        span {
+            color: $dark-gray;
+        }
+
+        a {
+            text-decoration: none;
+            color: $stuva-grey;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                color: $beige-col;
+            }
+        }
+
+        &:not(:last-of-type):after {
+            position: absolute;
+            width: 1px;
+            height: 13px;
+            z-index: 1;
+            right: 0;
+            background: $nero;
+            display: block;
+            content: '';
+            bottom: 0;
+        }
+    }
+}

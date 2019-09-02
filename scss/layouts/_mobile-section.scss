@@ -1,0 +1,63 @@
+.mobile-devices-section .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 74px 44px 0 77px;
+    flex-wrap: wrap;
+
+    @include bp(mobile) {
+        display: block;
+    }
+}
+
+.iphone {
+    flex: 1;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.mobile-text {
+    flex: 2;
+    padding-top: 111px;
+    padding-left: 27px;
+
+    h2 {
+        font-family: $raleway;
+        @include font-parametars (30px, 32px, 600);
+        color: $dark-gray;
+        margin-bottom: 27px;
+    }
+
+    p,
+    ul li {
+        font-family: $montserrat;
+        @include font-parametars (16px, 28px, 300);
+        color: $suva-grey;
+        margin-bottom: 40px;
+    }
+
+    ul {
+        padding-left: 50px;
+        padding-bottom: 50px;
+
+        li {
+            margin-bottom: 0;
+            position: relative;
+            padding-left: 42px;
+
+            &:before {
+                position: absolute;
+                content: '';
+                display: block;
+                width: 21px;
+                height: 21px;
+                left: 0;
+                top: 3px;
+                background: url("../assets/images/bullets.png");
+            }
+        }
+    }
+}

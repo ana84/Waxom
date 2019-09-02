@@ -1,0 +1,150 @@
+.burger-btn {
+    display: none;
+
+    @include bp(tablet) {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: block;
+        padding: 15px;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &:focus {
+            outline: 0;
+        }
+
+        span {
+            background: $base-color;
+            content: '';
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            z-index: 1;
+
+            &::after,
+            &::before {
+                background: $base-color;
+                content: '';
+                height: 2px;
+                left: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 20px;
+                z-index: 1;
+            }
+
+            &::before {
+                transition: 0.3s ease-in-out;
+                top: -5px;
+            }
+
+            &::after {
+                top: 7px;
+            }
+        }
+    }
+
+    @include bp(mobile) {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: block;
+        padding: 15px;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &:focus {
+            outline: 0;
+        }
+
+        span {
+            background: $base-color;
+            content: '';
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            z-index: 1;
+
+            &::after,
+            &::before {
+                background: $base-color;
+                content: '';
+                height: 2px;
+                left: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 20px;
+                z-index: 1;
+            }
+
+            &::before {
+                transition: 0.3s ease-in-out;
+                top: -5px;
+            }
+
+            &::after {
+                top: 7px;
+            }
+        }
+    }
+}
+
+.active-btn span {
+    left: 15%;
+    transform: rotate(45deg);
+
+    &:before {
+        left: 0;
+        transform: rotate(-90deg);
+        top: 0;
+    }
+
+    &:after {
+        opacity: 0;
+    }
+}
+
+.brown-btn {
+    background: $btn-color;
+    border-bottom: 2px solid $pine-cone;
+    border-radius: 3px;
+    color: $base-color;
+    display: inline-block;
+    transition: .3s ease-in-out;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 53px;
+    line-height: 53px;
+    padding: 0 40px 0 37px;
+
+    &:hover {
+        background: $btn-color-dark;
+        border-bottom: 2px solid $btn-bottom-color-dark;
+
+    }
+
+    @include bp(tablet) {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 40px 0 37px;
+    }
+
+    @include bp(mobile) {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 20px;
+    }
+}

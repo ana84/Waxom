@@ -1,0 +1,130 @@
+.video {
+    position: relative;
+}
+
+.video--unactive {
+    z-index: -1;
+}
+
+.content {
+    position: absolute;
+    display: inline-block;
+    transform: translateX(-50%);
+    left: 50%;
+    color: $base-color;
+    text-align: center;
+    z-index: 999;
+    top: 45%;
+
+    img {
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+        height: 70px;
+        width: 70px;
+    }
+
+    h2 {
+        font-family: $raleway;
+        @include font-parametars (30px, 32px, 600);
+        padding-top: 40px;
+        margin-bottom: 17px;
+    }
+
+    p {
+        font-family: $montserrat;
+        @include font-parametars (16px, 28px, 300);
+        margin-bottom: 25px;
+    }
+
+    span {
+        color: $beige-col;
+        font-family: $montserrat;
+        @include font-parametars (14px, 24px, 400);
+    }
+
+    @include bp(tablet) {
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        h2,
+        p {
+            display: none;
+        }
+    }
+
+    @include bp(mobile) {
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        h2,
+        p {
+            display: none;
+        }
+    }
+}
+
+.play-btn {
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .5);
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    padding-top: 15px;
+    position: relative;
+    transition: .3s ease-in-out;
+
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease-in-out;
+    }
+
+    &:hover {
+        opacity: .7;
+    }
+}
+
+.video-box {
+    position: relative;
+    padding-bottom: 50.25%;
+    height: 0;
+
+    button {
+        display: none;
+        background: $beige-col;
+        border: 0;
+        border-radius: 50%;
+        position: absolute;
+        height: 40px;
+        right: 30px;
+        top: 0;
+        transform: translateY(-50%);
+        width: 40px;
+        z-index: 1;
+        transition: .3s ease-in-out;
+
+        &::after {
+            content: 'x';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: .3s ease-in-out;
+        }
+
+        &:hover {
+            opacity: .9;
+        }
+    }
+
+    iframe {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+}

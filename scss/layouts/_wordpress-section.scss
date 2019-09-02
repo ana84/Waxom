@@ -1,0 +1,44 @@
+.wordpress-theme-section {
+    background-color: $cocoa-brown;
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 45px 30px 47px;
+        flex-wrap: wrap;
+    }
+
+    .brown-btn {
+        height: 50px;
+        line-height: 50px;
+        padding: 0 29px 0 28px;
+    }
+
+    @include bp(mobile) {
+        .brown-btn {
+            height: 30px;
+            line-height: 30px;
+            padding: 0 20px;
+        }
+    }
+}
+
+.wordpress-theme-text {
+    h2 {
+        font-family: $raleway;
+        @include font-parametars (28px, 30px, 400);
+        margin-bottom: 4px;
+
+        span {
+            color: $beige-col;
+        }
+    }
+
+    p {
+        font-family: $montserrat;
+        @include font-parametars (18px, 24px, 400);
+        color: $dorado;
+        margin-bottom: 10px;
+    }
+}

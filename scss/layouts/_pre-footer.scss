@@ -1,0 +1,39 @@
+.pre-footer {
+    background: url(../assets/images/partners.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20px;
+    min-height: 489px;
+    width: 100%;
+
+    .wrapper {
+        padding: 140px 15px 0;
+    }
+}
+
+.partners-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .partners-logo img {
+        padding: 0 15px;
+        flex: 1;
+    }
+
+    @include bp(tablet) {
+        .partners-logo img {
+            padding-bottom: 20px;
+            max-width: 200px;
+        }
+    }
+
+    @include bp(mobile) {
+        .partners-logo img {
+            padding-bottom: 30px;
+            max-width: 150px;
+        }
+    }
+
+}
